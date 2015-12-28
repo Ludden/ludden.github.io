@@ -7,9 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>
-	
-		Handy tips and notes
-	
+	{% if page.title %}
+		{{ page.title }}
+	{% else %}
+		Default Page Title
+	{% endif %}
     </title>
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
@@ -29,28 +31,7 @@
     <![endif]-->
   </head>
   <body id="page-top">
-    <section class="bg-dark">
-  <div class="text-center">
-    <h1>Handy tips and notes</h1>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="text-center">
-        <ul style="list-style-position: inside">
-           
-             <li>
-               <a href="/2015/12/28/virtualbox.html">When Virtualbox hangs in guru meditation</a>
-               - 28 December 2015
-             </li>
-           
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+    {{ content }}
     <!-- jQuery -->
     <script src="/js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
